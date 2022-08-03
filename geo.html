@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<head> 
+<title>Quick Google Maps service example</title> 
+<script type="text/javascript"> 
+ if (navigator.geolocation) { 
+ navigator.geolocation.getCurrentPosition 
+ (function(position) { 
+ document.location.href = 
+ "http://maps.google.com/maps?q=" 
+ + position.coords.latitude + ",+" 
+ + position.coords.longitude 
+ + "+(My%20location!)&iwloc=A&hl=en"; 
+ }); 
+ } 
+ else { 
+ document.innerHTML = "Sorry, your 
+ browser don't support Geolocation API"; 
+ } 
+</script> 
+</head> 
+<body> … </body> 
+</html>
